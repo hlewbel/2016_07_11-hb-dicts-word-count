@@ -25,12 +25,16 @@ for line in input_file:
         word_count[word] = current_count + 1
         #print word, word_count[word]
 
-#option 1 - works
+#option 1 - preferred
 #for key, value in word_count.items():
 #    print key, value
 
-#option 2 - works
-for key_word in word_count.keys():
-    print key_word, word_count[key_word]
+#option 2 - works but creates a new list in memory
+# might use .keys() if you wanted to sort your keys
+#for key_word in word_count.keys():
+#    print key_word, word_count[key_word]
 
+#option 3 doesn't create a new list in memory
+for key_word in word_count:
+    print key_word, word_count[key_word]
 
